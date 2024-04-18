@@ -1,0 +1,940 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+* {
+    margin: 0px;
+    padding: 0px;
+    font-family: 'Mulish', sans-serif;
+
+}
+
+.glowing {
+    box-shadow: 0 0 10px 5px #7374b3;
+    /* Change color and size as needed */
+}
+
+
+
+.left {
+    width: 25vw;
+    padding: 9px;
+}
+
+.right {
+    width: 75vw;
+    margin: 9px;
+    position: relative;
+}
+
+.name {
+    display: flex;
+}
+
+.home ul {
+    width: -1px;
+    list-style: none;
+    display: flex;
+    gap: 6px;
+    padding: 0px;
+    font-weight: bold;
+}
+.insta{
+    display: flex;
+}
+.instagram :hover {
+    transform: scale(1.3);
+    transition: transform 0.3s ease-in-out;
+
+}
+
+.topLeft {
+    list-style: none;
+    display: flex;
+    color: white;
+}
+
+.logo {
+
+    gap: 9px;
+    margin: 7px;
+    display: flex;
+}
+
+.logo h3 {
+    font-weight: bold;
+    color: black;
+}
+
+.library {
+    min-height: 85vh;
+    position: relative;
+    overflow: auto;
+}
+
+.songlist ul {
+    height: 410px; /* Set the height of the list */
+    overflow-y: scroll; /* Enable vertical scrolling */
+    padding: 0 0px; /* Adjust padding as needed */
+}
+
+/* Hide scrollbar */
+.songlist ul::-webkit-scrollbar {
+    display: none; /* Hide scrollbar for WebKit browsers */
+}
+
+.download-button {
+    background-color: rgb(138, 133, 212); /* Green */
+    border: none;
+    color: white;
+    padding: 1px 16px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 8px;
+}
+
+.download-button:hover {
+    background-color:rgb(119, 114, 180); /* Darker green */
+}
+
+
+.songlist li {
+    
+    list-style-type: decimal;
+    display: flex;
+    justify-content: space-between;
+    gap: 12px;
+    cursor: pointer;
+    padding: 12px 0;
+    border: 1px solid rgba(146, 143, 143, 0.491);
+    margin: 7px 0;
+    padding: 13px;
+    border-radius: 5px;
+}
+
+.playnow {
+
+    padding-right: 15px;
+    width: 10px;
+    display: flex;
+    align-items: center;
+    /* margin-left: 5px; */
+}
+
+.songlist li:hover {
+    background-color: #86A8CF;
+    /* Change the background color on hover */
+    color: #fff;
+    /* Change text color on hover */
+    transition: background-color 0.3s ease-in-out;
+    /* Add transition effect */
+}
+
+.l1 {
+    width: 15px;
+    list-style: none;
+    display: flex;
+    gap: 6px;
+    padding: 3px;
+}
+
+.footer {
+    display: flex;
+    font-size: 11px;
+    color: grey;
+    gap: 28px;
+    position: absolute;
+    bottom: 0;
+    padding: 10px 0;
+}
+
+.footer a {
+    list-style: none;
+    display: flex;
+    color: white;
+}
+
+.legal:hover {
+    transform: scale(1.1);
+    transition: transform 0.3s ease-in-out;
+
+}
+
+.contact:hover {
+    transform: scale(1.1);
+    transition: transform 0.3s ease-in-out;
+
+}
+
+.privacy:hover {
+    transform: scale(1.1);
+    transition: transform 0.3s ease-in-out;
+
+}
+
+.about:hover {
+    transform: scale(1.1);
+    transition: transform 0.3s ease-in-out;
+
+}
+
+.header {
+
+    background-color: rgba(41, 35, 35, 0.349);
+
+    display: flex;
+    margin: 1px;
+
+    justify-content: space-between;
+}
+
+
+/* Styles for the search container */
+.search-container {
+    margin-left: -300px;
+    display: flex;
+    /* Make the container a flexbox */
+    align-items: center;
+    padding-top: 13px;
+}
+
+/* CSS for search result */
+.searchresult {
+    position: fixed;
+    top: 16%;
+    left: 29%;
+    backdrop-filter: blur(8px);
+    padding: 10px;
+    z-index: 999;
+}
+
+.searchresult ul li {
+
+    padding-left: 7px;
+    width: 100%;
+    margin: 8px 1px;
+    list-style: none;
+    cursor: pointer;
+    border-radius: 2px;
+    border: 1px solid rgba(146, 143, 143, 0.491);
+}
+
+.searchresult ul li:hover {
+
+    transform: scale(1.01);
+    transition: transform 0.3s ease-in-out;
+}
+
+#searchInput {
+    background: lavenderblush;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    padding: 10px;
+    /* Add padding */
+    border: 1px solid #ccc;
+    /* Add border */
+    border-radius: 18px;
+    /* Add border radius */
+    outline: none;
+    /* Remove outline */
+    font-size: 14px;
+    /* Set font size */
+    width: 200px;
+}
+
+
+.uploadS {
+    margin-top: 0px;
+    padding: 5px;
+    border: 1px solid rgba(41, 35, 35, 0.349);
+    border-radius: 3px;
+    background-color: rgba(41, 35, 35, 0.349);
+    max-width: 250px;
+    /* Limit the width of the form */
+}
+
+.uploadS h2 {
+    margin-bottom: 3px;
+    font-size: 14px;
+    /* Reduce the font size */
+}
+
+#uploadForm {
+    display: flex;
+    flex-direction: column;
+}
+
+#mp3FileInput {
+    margin-bottom: 3px;
+    font-size: 12px;
+    /* Reduce the font size */
+}
+
+button[type="submit"] {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 3px;
+    padding: 6px 10px;
+    /* Reduce button padding */
+    cursor: pointer;
+    font-size: 12px;
+    /* Reduce the font size */
+}
+
+button[type="submit"]:hover {
+    background-color: #0056b3;
+}
+
+
+
+.header>* {
+
+    padding: 15px;
+}
+
+.button {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+
+}
+
+.button button {
+    margin-bottom: 5px;
+    /* Adjust the margin between buttons */
+}
+
+.sign {
+    background-color: rgba(41, 35, 35, 0.349);
+    color: white;
+    font-size: small;
+
+    font-family: 'Times New Roman', Times, serif;
+    display: flex;
+    align-items: center;
+    width: 95px;
+    height: 34px;
+    top: 50%;
+    margin-top: 0px;
+    border-radius: 20px;
+    padding-left: 21px;
+    border: none;
+    outline: none;
+
+}
+
+.login {
+    font-size: small;
+    font-family: 'Times New Roman', Times, serif;
+    display: flex;
+    align-items: center;
+    width: 87px;
+    height: 34px;
+    top: 50%;
+    margin-top: 0px;
+    background-color: #ffffff;
+    border-radius: 20px;
+    padding-left: 21px
+}
+
+/* .sign:hover {
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.login:hover {
+    font-size: 12px;
+    font-weight: bold;
+} */
+
+.MusicallyPlaylist {
+    padding-top: 15px;
+    padding-left: 14px;
+}
+
+.Artist {
+    padding-top: 15px;
+    padding-left: 14px;
+}
+
+.podcast {
+    padding-top: 15px;
+    padding-left: 14px;
+}
+
+/* Style for the switch button */
+.switch-button {
+    background-color: rgba(78, 65, 65, 0.349);
+    /* Green */
+    border: none;
+    color: white;
+    padding: 7px 12px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 12px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+/* Hover effect */
+.switch-button:hover {
+    background-color: rgba(41, 35, 35, 0.349);
+}
+
+/* Style for other buttons */
+.other-button {
+    background-color: #008CBA;
+    /* Blue */
+    border: none;
+    color: white;
+    padding: 10px 24px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+/* Hover effect */
+.other-button:hover {
+    background-color: #6c8aad;
+}
+
+.playlistplaynow {
+    width: 32px;
+
+}
+
+.playlist {
+    display: flex;
+    gap: 28px;
+    flex-wrap: wrap;
+    /* overflow-y: auto; */
+    padding-top: 10px;
+    padding-left: 0px;
+}
+
+.cardContainer {
+    display: flex;
+    gap: 20px;
+    margin: 6px;
+    margin-left: 40px;
+    overflow-y: auto; /* Enable vertical scrolling */
+    flex-wrap: wrap;
+    max-height: 71vh; /* Set the maximum height of the container */
+}
+
+/* Hide scrollbar */
+.cardContainer::-webkit-scrollbar {
+    display: none; /* Hide scrollbar for WebKit browsers */
+}
+
+
+
+#createPlaylistForm {
+    scrollbar-width: none;
+}
+
+#createPlaylistForm input[type="text"] {
+    margin-top: 3px;
+    padding: 6px;
+    font-weight: bold;
+    background-color: white;
+    color: #000000;
+    border: none;
+    border-radius: 9px;
+    cursor: pointer;
+    font-size: 11px;
+    margin-left: 3px;
+    outline: none;
+}
+
+#createPlaylistForm button[type="submit"] {
+    margin-top: 10px;
+    padding: 4px;
+    background-color: rgb(58, 58, 114);
+    color: #fff;
+    border: none;
+    border-radius: 7px;
+    cursor: pointer;
+    font-size: 15px;
+    margin-left: 47px;
+}
+
+
+
+/* PLAYLIST CARDS */
+.card {
+    margin: -1px;
+    cursor: pointer;
+    position: relative;
+    width: 160px;
+    padding: 9px;
+    border-radius: 5px;
+    background-color: rgb(24, 21, 21);
+}
+
+.card img {
+    width: 162px;
+    height: 162px;
+}
+
+.card:hover {
+    transform: scale(1.05);
+    transition: transform 0.3s ease-in-out;
+}
+
+.delete-button {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    background-color: #ff0000;
+    /* Red */
+    color: #fff;
+    border: none;
+    padding: 3px 6px;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+.play {
+    position: absolute;
+    bottom: 89px;
+    right: 16px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.play:hover {
+    transform: scale(1.01);
+    transition: transform 0.3s ease-in-out;
+}
+
+.player {
+    border-radius: 13px;
+    position: fixed;
+    bottom: 0;
+    background-color: #86A8CF;
+    width: 73%;
+    padding-top: 28px;
+
+}
+
+.songbutton {
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: center;
+    gap: 38px;
+    padding-bottom: 26px;
+    padding-left: 0px;
+    cursor: pointer;
+}
+
+.duration {
+    padding-right: 25px;
+}
+
+.songs {
+    margin-top: 15px;
+}
+
+
+.seekbar {
+    margin-left: 5px;
+    height: 7px;
+    width: 94%;
+    background: rgb(236, 230, 230);
+    border-radius: 10px;
+    position: absolute;
+    bottom: 8px;
+    margin: 6px 25px;
+    cursor: pointer;
+}
+
+.circle {
+    width: 13px;
+    height: 17px;
+    border-radius: 13px;
+    background-color: rgb(221, 209, 209);
+    position: relative;
+    bottom: 5px;
+    left: 0%;
+    transition: left 0.5s;
+}
+
+
+.duration {
+    color: black;
+
+}
+
+.above {
+    padding-bottom: 10px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.info {
+    display: flex;
+    padding-left: 5px;
+    align-items: center;
+    text-align: center;
+}
+
+.timevol {
+    padding-bottom: 41px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+
+.songinfo {
+
+    color: black;
+    padding: 0 12px;
+    width: 121px;
+}
+
+.songtime {
+    width: 125px;
+    color: black;
+    padding: 0 12px;
+}
+
+
+.volume {
+    padding-right: 21px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+    cursor: pointer;
+}
+
+.range input {
+    cursor: pointer;
+}
+
+
+.song-image {
+    padding-bottom: 18px;
+    padding-left: 400px;
+    width: 166px;
+}
+
+.image-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.metadata-left,
+.metadata-right {
+    position: absolute;
+    color: white;
+    font-size: 14px;
+    opacity: 0.8;
+}
+
+.metadata-left {
+    color: black;
+    font-size: large;
+    left: 15px;
+}
+
+.metadata-right {
+    color: black;
+    font-size: large;
+    right: 26px;
+}
+
+.hidden {
+    display: none;
+}
+
+.player h2 {
+    display: none;
+}
+
+.metadata-right h2 {
+    display: none;
+}
+
+.liked {
+    background-color: rgba(146, 143, 143, 0.491);
+    /* Example background color for liked songs */
+}
+
+.like {
+    background: none;
+    border: none;
+}
+
+.like::before {
+    content: url('love-like-svgrepo-com (1).svg');
+    /* Replace with the path to your SVG */
+    display: inline-block;
+    width: 24px;
+    /* Adjust width as needed */
+    height: 24px;
+    /* Adjust height as needed */
+}
+
+.remove {
+    background: none;
+    border: none;
+    padding: 0;
+    /* Remove any default padding */
+    display: flex;
+    align-items: center;
+}
+
+.remove img {
+    width: 24px;
+    /* Adjust width as needed */
+    height: 24px;
+    /* Adjust height as needed */
+    margin-right: 5px;
+    /* Adjust spacing between icon and text */
+}
+
+
+
+#toggleLikedSongModeBtn {
+    background-color: #7797bd;
+    /* Green background color */
+    border: none;
+    /* Remove border */
+    color: white;
+    /* White text color */
+    padding: 7px 8px;
+    /* Add padding */
+    text-align: center;
+    /* Center-align text */
+    text-decoration: none;
+    /* Remove default underline */
+    display: inline-block;
+    /* Make it display as a block element */
+    font-size: 13px;
+    /* Set font size */
+
+    cursor: pointer;
+    /* Change cursor to pointer on hover */
+    border-radius: 5px;
+    /* Add border radius */
+    margin-left: 5px;
+}
+
+
+.popup {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #ffffff;
+    border: 1px solid #ccc;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.5);
+    max-width: 300px;
+    /* Adjust the width as needed */
+    z-index: 1000;
+    /* Higher z-index value */
+}
+
+.popup h2 {
+    margin-top: 0;
+}
+
+.popup form {
+    margin-bottom: 10px;
+}
+
+.popup label {
+    color: black;
+    display: block;
+    margin-bottom: 5px;
+}
+
+.popup input[type="email"],
+.popup input[type="password"],
+.popup input[type="tel"] {
+    width: calc(100% - 20px);
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.popup button {
+    width: calc(100% - 20px);
+    padding: 10px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.popup button:hover {
+    background-color: #45a049;
+}
+
+.popup button[type="submit"] {
+    background-color: #007bff;
+}
+
+.popup button[type="submit"]:hover {
+    background-color: #0056b3;
+}
+
+.popup button:last-of-type {
+    background-color: #86A8CF;
+    margin-top: 5px;
+}
+
+.popup button:last-of-type:hover {
+    background-color: #50749c;
+}
+
+.popup p {
+    color: black;
+    margin-bottom: 10px;
+}
+
+.popup p a {
+    color: red;
+    text-decoration: none;
+}
+
+.popup p a:hover {
+    text-decoration: underline;
+}
+
+/* feedback */
+.feedbackbutton {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: rgba(22, 20, 20, 0.347);
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+.feedbackbutton:hover {
+    background-color: rgba(41, 35, 35, 0.7);
+}
+
+.popup-feedback-container {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 9999;
+    max-width: 300px;
+    padding: 20px;
+
+    border-radius: 5px;
+    background-color: rgba(41, 35, 35, 0.7);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.popup-feedback-container.show {
+    background-color: rgba(41, 35, 35, 0.7);
+    display: block;
+}
+
+.popup-feedback-container h2 {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.popup-feedback-container label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.popup-feedback-container input[type="text"],
+.popup-feedback-container input[type="email"],
+.popup-feedback-container textarea {
+    width: calc(100% - 20px);
+    padding: 5px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+}
+
+.popup-feedback-container textarea {
+    height: 100px;
+}
+
+.popup-feedback-container input[type="submit"] {
+    width: calc(100% - 20px);
+    background-color: #4caf50;
+    color: white;
+    padding: 5px;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+.popup-feedback-container input[type="submit"]:hover {
+    background-color: #45a049;
+}
+
+.hamburger {
+    display: none;
+}
+
+.close {
+    display: none;
+}
+.close-button{
+    margin-left: 178px;
+}
+/* CSS to make text appear on everything and then vanish with animations */
+/* body::after {
+    content: url('music-1813100_1280.jpg');
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 9999;
+    animation: appear 1s ease forwards, vanish 1s ease forwards 2s;
+    
+}
+
+@keyframes appear {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes vanish {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+        display: none;
+    }
+} */
+

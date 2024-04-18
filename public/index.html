@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="utility.css">
+    <title>Musically project</title>
+
+</head>
+
+<body>
+    
+    <div class="container flex bg-cl">
+        <div class="left">
+            <div class="close">
+                <img width="50" class="invert" src="close.svg" alt="">
+            </div>
+            <div class="home bg-black rounded m-1 ">
+                <div class="logo invert">
+                    <img src="hu.png" alt="logo" width="23" height="23">
+                    <h3>Musically</h3>
+                </div>
+                <ul>
+                    <img class="invert" src="feedback-svgrepo-com.svg" alt="feedback-svgrepo-com">
+                    <button class="feedbackbutton" onclick="toggleFeedbackForm()">Give Feedback</button>
+
+                    <!-- Pop-up feedback form container -->
+                    <div id="popupFeedback" class="popup-feedback-container" >
+                        <h2>Feedback Form</h2>
+                        <button class="close-button" onclick="toggleFeedbackForm()">Close</button>
+   
+                        <form action="/submit_feedback" method="post">
+                            <label for="name">Your Name:</label>
+                            <input type="text" id="name" name="name" required autocomplete="name">
+                        
+                            <label for="email">Your Email:</label>
+                            <input type="email" id="email" name="email" required autocomplete="email">
+                        
+                            <label for="feedback">Feedback:</label>
+                            <textarea id="feedback" name="feedback" required autocomplete="feedback"></textarea>
+                        
+                            <input type="submit" value="Submit">
+                        </form>
+                        
+                    </div>
+                    <h3 class="insta">follow us on instagram
+                        <a href="https://www.instagram.com/rahul22____/" target="_blank" class="instagram">
+                            <img src="instagram-icon.svg" alt="Instagram">
+                        </a>
+                    </h3>
+                </ul>
+            </div>
+            <div class="library bg-black rounded m-1">
+                <div class="l1">
+                    <img class="invert" src="playlist.svg" alt="logo">
+                    <h2>library</h2>
+                </div>
+                <div class="songlist">
+
+                    <ul>
+
+                    </ul>
+
+
+
+
+                </div>
+
+
+                <div class="footer ">
+                    <div class="legal"><a href="legal.html"><span>Legal</span></a></div>
+                    <div class="contact"><a href="contact.html"><span>contact</span></a></div>
+                    <div class="privacy"><a href="privacy.html"><span>Privacy Policy</span></a> </div>
+                    <div class="about"><a href="about.html"><span>About us</span></a></div>
+
+                </div>
+            </div>
+        </div>
+        <div class="right bg-black rounded m-2">
+            <div class="header rounded">
+                <div class="hamburgerContainer">
+
+                    <img width="40" class="invert hamburger" src="hamburger.svg" alt="">
+                </div>
+                <div class="search">
+                    <div class="search-container">
+                        <input type="text" id="searchInput" placeholder="Search for songs...">
+                            </div>
+                    <div class="searchresult" id="searchResultContainer">
+
+                    </div>
+                </div>
+
+                
+                <div class="uploadS">
+                    <h2>share your music :</h2>
+                    <form id="uploadForm" enctype="multipart/form-data" onsubmit="uploadFile(); return false;">
+                        <input type="file" id="mp3FileInput" name="mp3File">
+                        <button type="submit">Upload MP3</button>
+                    </form>
+                </div>
+
+
+            </div>
+            <div class="MusicallyPlaylist">
+                <h2>Playlist
+                    <button class="switch-button" onclick="switchToArtistSection()">Switch to Artist Section</button>
+                    <!-- Button to switch to Podcast section -->
+                    <button class="switch-button" onclick="switchToPodcastSection()">Switch to Podcast Section</button>
+
+                </h2>
+
+                <div class="cardContainer rounded">
+                    <div class="playlist">
+
+                        <!-- <div class="card">
+                            <img class="rounded" src="arthur-franklin-EIuqUQddc3Q-unsplash.jpg" alt="Bollywood Covers">
+
+                            <div class="createPlaylistSection">
+                                <form id="createPlaylistForm">
+                                    <div id="playlists">
+
+                                    </div>
+                                    <input type="text" id="newPlaylistName" placeholder="Enter New Playlist Name">
+                                    <button id="createPlaylistBtn" type="submit">Create Playlist</button>
+                                    <div id="uploadedFiles"></div>
+
+                                </form>
+
+                            </div>
+                        </div> -->
+                        <div data-folder="all" class="card">
+                            <div class="play">
+                                <svg height="38px" width="38px" viewBox="0 0 58 58" xmlns="http://www.w3.org/2000/svg">
+                                    <circle fill="#3e5bc1" cx="29" cy="29" r="29" />
+                                    <polygon fill="#FFFFFF" points="44,29 22,44 22,29.273 22,14" />
+                                    <path fill="#FFFFFF"
+                                        d="M22,45c-0.16,0-0.321-0.038-0.467-0.116C21.205,44.711,21,44.371,21,44V14c0-0.371,0.205-0.711,0.533-0.884c0.328-0.174,0.724-0.15,1.031,0.058l22,15C44.836,28.36,45,28.669,45,29s-0.164,0.64-0.437,0.826l-22,15C22.394,44.941,22.197,45,22,45zM23,15.893v26.215L42.225,29L23,15.893z" />
+                                </svg>
+
+                            </div>
+                            <img class="rounded" src="music.jpeg" alt="Bollywood Covers">
+                            <h3>Music Has No Limits</h3>
+                            <p>non stop music</p>
+                        </div>
+
+
+                        <div data-folder="uploadedsongs" class="card">
+                            <div class="play">
+                                <svg height="38px" width="38px" viewBox="0 0 58 58" xmlns="http://www.w3.org/2000/svg">
+                                    <circle fill="#3e5bc1" cx="29" cy="29" r="29" />
+                                    <polygon fill="#FFFFFF" points="44,29 22,44 22,29.273 22,14" />
+                                    <path fill="#FFFFFF"
+                                        d="M22,45c-0.16,0-0.321-0.038-0.467-0.116C21.205,44.711,21,44.371,21,44V14c0-0.371,0.205-0.711,0.533-0.884c0.328-0.174,0.724-0.15,1.031,0.058l22,15C44.836,28.36,45,28.669,45,29s-0.164,0.64-0.437,0.826l-22,15C22.394,44.941,22.197,45,22,45zM23,15.893v26.215L42.225,29L23,15.893z" />
+                                </svg>
+
+                            </div>
+                            <img class="rounded" src="upload.jpg" alt="Bollywood Covers">
+                            <h3>Uploads </h3>
+                            <p>People's Shared Content</p>
+                        </div>
+
+                        <div data-folder="indie" class="card">
+                            <div class="play">
+                                <svg height="38px" width="38px" viewBox="0 0 58 58" xmlns="http://www.w3.org/2000/svg">
+                                    <circle fill="#3e5bc1" cx="29" cy="29" r="29" />
+                                    <polygon fill="#FFFFFF" points="44,29 22,44 22,29.273 22,14" />
+                                    <path fill="#FFFFFF"
+                                        d="M22,45c-0.16,0-0.321-0.038-0.467-0.116C21.205,44.711,21,44.371,21,44V14c0-0.371,0.205-0.711,0.533-0.884c0.328-0.174,0.724-0.15,1.031,0.058l22,15C44.836,28.36,45,28.669,45,29s-0.164,0.64-0.437,0.826l-22,15C22.394,44.941,22.197,45,22,45zM23,15.893v26.215L42.225,29L23,15.893z" />
+                                </svg>
+
+                            </div>
+                            <img class="rounded" src="pk.jpg" alt="Bollywood Covers">
+                            <h3>Indie HITS </h3>
+                            <p>Falling in love , Listen to this</p>
+                        </div>
+
+                        <div data-folder="tamil" class="card">
+                            <div class="play">
+                                <svg height="38px" width="38px" viewBox="0 0 58 58" xmlns="http://www.w3.org/2000/svg">
+                                    <circle fill="#3e5bc1" cx="29" cy="29" r="29" />
+                                    <polygon fill="#FFFFFF" points="44,29 22,44 22,29.273 22,14" />
+                                    <path fill="#FFFFFF"
+                                        d="M22,45c-0.16,0-0.321-0.038-0.467-0.116C21.205,44.711,21,44.371,21,44V14c0-0.371,0.205-0.711,0.533-0.884c0.328-0.174,0.724-0.15,1.031,0.058l22,15C44.836,28.36,45,28.669,45,29s-0.164,0.64-0.437,0.826l-22,15C22.394,44.941,22.197,45,22,45zM23,15.893v26.215L42.225,29L23,15.893z" />
+                                </svg>
+
+                            </div>
+                            <img class="rounded" src="images (3).jpeg" alt="Bollywood Covers">
+                            <h3>Romantic </h3>
+                            <p>Falling in love , Listen to this</p>
+                        </div>
+
+                        <div data-folder="south" class="card">
+                            <div class="play">
+                                <svg height="38px" width="38px" viewBox="0 0 58 58" xmlns="http://www.w3.org/2000/svg">
+                                    <circle fill="#3e5bc1" cx="29" cy="29" r="29" />
+                                    <polygon fill="#FFFFFF" points="44,29 22,44 22,29.273 22,14" />
+                                    <path fill="#FFFFFF"
+                                        d="M22,45c-0.16,0-0.321-0.038-0.467-0.116C21.205,44.711,21,44.371,21,44V14c0-0.371,0.205-0.711,0.533-0.884c0.328-0.174,0.724-0.15,1.031,0.058l22,15C44.836,28.36,45,28.669,45,29s-0.164,0.64-0.437,0.826l-22,15C22.394,44.941,22.197,45,22,45zM23,15.893v26.215L42.225,29L23,15.893z" />
+                                </svg>
+
+                            </div>
+                            <img class="rounded" src="download (2).jpeg" alt="Bollywood Covers">
+                            <h3>South Mass </h3>
+                            <p>mass singers like anirudhh</p>
+                        </div>
+
+
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="Artist" id="artist-section">
+                <h2>Artist
+                    <button class="switch-button" onclick="switchToMusicallyPlaylistSection()">Switch to Musically
+                        Playlist Section</button>
+                    <!-- Button to switch to Podcast section -->
+                    <button class="switch-button" onclick="switchToPodcastSection()">Switch to Podcast Section</button>
+                </h2>
+
+
+                <div class="cardContainer rounded">
+                    <div class="playlist">
+
+
+                        <div data-folder="talhaanjum" class="card">
+                            <div class="play">
+                                <svg height="38px" width="38px" viewBox="0 0 58 58" xmlns="http://www.w3.org/2000/svg">
+                                    <circle fill="#3e5bc1" cx="29" cy="29" r="29" />
+                                    <polygon fill="#FFFFFF" points="44,29 22,44 22,29.273 22,14" />
+                                    <path fill="#FFFFFF"
+                                        d="M22,45c-0.16,0-0.321-0.038-0.467-0.116C21.205,44.711,21,44.371,21,44V14c0-0.371,0.205-0.711,0.533-0.884c0.328-0.174,0.724-0.15,1.031,0.058l22,15C44.836,28.36,45,28.669,45,29s-0.164,0.64-0.437,0.826l-22,15C22.394,44.941,22.197,45,22,45zM23,15.893v26.215L42.225,29L23,15.893z" />
+                                </svg>
+
+                            </div>
+                            <img class="rounded" src="talha.jpeg" alt="Bollywood Covers">
+                            <h3>talhaanjum</h3>
+                            <p>People's Shared Content</p>
+                        </div>
+                        <div data-folder="arjitsingh" class="card">
+                            <div class="play">
+                                <svg height="38px" width="38px" viewBox="0 0 58 58" xmlns="http://www.w3.org/2000/svg">
+                                    <circle fill="#3e5bc1" cx="29" cy="29" r="29" />
+                                    <polygon fill="#FFFFFF" points="44,29 22,44 22,29.273 22,14" />
+                                    <path fill="#FFFFFF"
+                                        d="M22,45c-0.16,0-0.321-0.038-0.467-0.116C21.205,44.711,21,44.371,21,44V14c0-0.371,0.205-0.711,0.533-0.884c0.328-0.174,0.724-0.15,1.031,0.058l22,15C44.836,28.36,45,28.669,45,29s-0.164,0.64-0.437,0.826l-22,15C22.394,44.941,22.197,45,22,45zM23,15.893v26.215L42.225,29L23,15.893z" />
+                                </svg>
+
+                            </div>
+                            <img class="rounded" src="arjitsingh.jpeg" alt="Bollywood Covers">
+                            <h3>arjit singh</h3>
+                            <p>People's Shared Content</p>
+                        </div>
+
+                        <div data-folder="anirudhh" class="card">
+                            <div class="play">
+                                <svg height="38px" width="38px" viewBox="0 0 58 58" xmlns="http://www.w3.org/2000/svg">
+                                    <circle fill="#3e5bc1" cx="29" cy="29" r="29" />
+                                    <polygon fill="#FFFFFF" points="44,29 22,44 22,29.273 22,14" />
+                                    <path fill="#FFFFFF"
+                                        d="M22,45c-0.16,0-0.321-0.038-0.467-0.116C21.205,44.711,21,44.371,21,44V14c0-0.371,0.205-0.711,0.533-0.884c0.328-0.174,0.724-0.15,1.031,0.058l22,15C44.836,28.36,45,28.669,45,29s-0.164,0.64-0.437,0.826l-22,15C22.394,44.941,22.197,45,22,45zM23,15.893v26.215L42.225,29L23,15.893z" />
+                                </svg>
+
+                            </div>
+                            <img class="rounded" src="download (9).jpeg " alt="Bollywood Covers">
+                            <h3>Anirudh Ravichander </h3>
+                            <p>People's Shared Content</p>
+                        </div>
+
+                        <div data-folder="kishorkumar" class="card">
+                            <div class="play">
+                                <svg height="38px" width="38px" viewBox="0 0 58 58" xmlns="http://www.w3.org/2000/svg">
+                                    <circle fill="#3e5bc1" cx="29" cy="29" r="29" />
+                                    <polygon fill="#FFFFFF" points="44,29 22,44 22,29.273 22,14" />
+                                    <path fill="#FFFFFF"
+                                        d="M22,45c-0.16,0-0.321-0.038-0.467-0.116C21.205,44.711,21,44.371,21,44V14c0-0.371,0.205-0.711,0.533-0.884c0.328-0.174,0.724-0.15,1.031,0.058l22,15C44.836,28.36,45,28.669,45,29s-0.164,0.64-0.437,0.826l-22,15C22.394,44.941,22.197,45,22,45zM23,15.893v26.215L42.225,29L23,15.893z" />
+                                </svg>
+
+                            </div>
+                            <img class="rounded" src="kishorkumar.jpeg" alt="Bollywood Covers">
+                            <h3>kishorkumar</h3>
+                            <p>People's Shared Content</p>
+                        </div>
+
+                        <div data-folder="amittrivedi" class="card">
+                            <div class="play">
+                                <svg height="38px" width="38px" viewBox="0 0 58 58" xmlns="http://www.w3.org/2000/svg">
+                                    <circle fill="#3e5bc1" cx="29" cy="29" r="29" />
+                                    <polygon fill="#FFFFFF" points="44,29 22,44 22,29.273 22,14" />
+                                    <path fill="#FFFFFF"
+                                        d="M22,45c-0.16,0-0.321-0.038-0.467-0.116C21.205,44.711,21,44.371,21,44V14c0-0.371,0.205-0.711,0.533-0.884c0.328-0.174,0.724-0.15,1.031,0.058l22,15C44.836,28.36,45,28.669,45,29s-0.164,0.64-0.437,0.826l-22,15C22.394,44.941,22.197,45,22,45zM23,15.893v26.215L42.225,29L23,15.893z" />
+                                </svg>
+
+                            </div>
+                            <img class="rounded" src="amittrivedi.jpeg" alt="Bollywood Covers">
+                            <h3>amittrivedi</h3>
+                            <p>People's Shared Content</p>
+
+                        </div>
+
+                        <div data-folder="stephendawes" class="card">
+                            <div class="play">
+                                <svg height="38px" width="38px" viewBox="0 0 58 58" xmlns="http://www.w3.org/2000/svg">
+                                    <circle fill="#3e5bc1" cx="29" cy="29" r="29" />
+                                    <polygon fill="#FFFFFF" points="44,29 22,44 22,29.273 22,14" />
+                                    <path fill="#FFFFFF"
+                                        d="M22,45c-0.16,0-0.321-0.038-0.467-0.116C21.205,44.711,21,44.371,21,44V14c0-0.371,0.205-0.711,0.533-0.884c0.328-0.174,0.724-0.15,1.031,0.058l22,15C44.836,28.36,45,28.669,45,29s-0.164,0.64-0.437,0.826l-22,15C22.394,44.941,22.197,45,22,45zM23,15.893v26.215L42.225,29L23,15.893z" />
+                                </svg>
+
+                            </div>
+                            <img class="rounded" src="stephendewas.jpeg" alt="Bollywood Covers">
+                            <h3>stephendawes</h3>
+                            <p>People's Shared Content</p>
+                        </div>
+
+
+                    </div>
+                </div>
+
+            </div>
+            <div class="podcast" id="podcast-section">
+                <h2>Podcast
+                    <button class="switch-button" onclick="switchToMusicallyPlaylistSection()">Switch to Musically
+                        Playlist Section</button>
+                    <!-- Button to switch to Artist section -->
+                    <button class="switch-button" onclick="switchToArtistSection()">Switch to Artist Section</button>
+
+                </h2>
+
+            <div class="cardContainer rounded">
+                <div class="podcast">
+
+                    <div data-folder="podcast" class="card">
+                        <div class="play">
+                            <svg height="38px" width="38px" viewBox="0 0 58 58" xmlns="http://www.w3.org/2000/svg">
+                                <circle fill="#3e5bc1" cx="29" cy="29" r="29" />
+                                <polygon fill="#FFFFFF" points="44,29 22,44 22,29.273 22,14" />
+                                <path fill="#FFFFFF"
+                                    d="M22,45c-0.16,0-0.321-0.038-0.467-0.116C21.205,44.711,21,44.371,21,44V14c0-0.371,0.205-0.711,0.533-0.884c0.328-0.174,0.724-0.15,1.031,0.058l22,15C44.836,28.36,45,28.669,45,29s-0.164,0.64-0.437,0.826l-22,15C22.394,44.941,22.197,45,22,45zM23,15.893v26.215L42.225,29L23,15.893z" />
+                            </svg>
+    
+                        </div>
+                        <img class="rounded" src="ranveer.jpeg" alt="podcast">
+                        <h3>TRS</h3>
+                        <p>ranveer allahbadia </p>
+                    </div>
+    
+    
+                </div>
+            </div>
+            </div>
+
+            <div class="player">
+                <div class="playbar">
+                    <div class="image-container">
+                        <div class="metadata-left">
+                            <p class="song-title"></p>
+                            <h2>Artist</h2>
+                            <p class="artist"></p>
+                        </div>
+                        <img class="song-image" src="pngwing.com.png" alt="Song Image">
+                        <div class="metadata-right">
+                            <h2>Album</h2>
+                            <p class="album"></p>
+                            <p class="duration"></p>
+                        </div>
+                    </div>
+                    <div class="seekbar">
+                        <div class="circle">
+
+                        </div>
+                    </div>
+                    <div class="above">
+                        <div class="songinfo">
+
+                        </div>
+
+                        <div class="songbutton">
+                            <button class="download-button"><img src="download.svg" alt="Download"></button>
+      
+                            <button id="toggleLikedSongModeBtn">onlyLikedsong </button>
+                            <img id="prev" src="prevsong.svg" alt="prev s">
+                            <img id="playsong" src="pause.svg" alt="playbarPlaynow">
+                            <img id="next" src="nextsong.svg" alt="next s">
+                            <img id="shuffle" src="shuffle-svgrepo-com.svg" alt="shuffle">
+                            <div id="likedSongModeStatus"></div>
+
+
+
+                        </div>
+                        <div class="timevol">
+
+
+                            <div class="duration">
+
+                            </div>
+                            <div class="volume">
+                                <img width="25" src="volume.svg" alt="">
+                                <div class="range">
+                                    <input type="range" name="volume" id="">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+
+            </div>
+
+
+
+        </div>
+        
+
+    </div>
+
+
+
+
+
+
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jsmediatags/3.9.0/jsmediatags.min.js"></script>
+
+    <script src="logic.js"></script>
+    <!-- <script src="logic1.js"></script> -->
+    <script src="search.js"></script>
+    <script src="upload.js"></script>
+    <script src="toggle.js"></script>
+    <script src="likeButton.js"></script>
+    <script src="shuffle.js"></script>
+    <script src="only.js"></script>
+    <script src="sl.js"></script>
+    <script src="feedback.js"></script>
+    <script src="download.js"></script>
+    <!-- <script src="playlist.js"></script> -->
+
+
+</body>
+
+</html>
